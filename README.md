@@ -43,3 +43,82 @@
 -  C. 12345678910
 -  D. 10987654321
 
+---------
+
+ **Question #3**
+
+```sh
+   const fruits = [
+        "banana",
+        "apple",
+        "orange",
+        "orange",
+        "banana",
+        "apple",
+        "apple",
+        "orange",
+        "banana",
+    ];
+
+    const fruits_object = {};
+
+    fruits.forEach((fruit) => {
+        fruits_object[fruit] = "available";
+    });
+
+    console.log(Object.keys(fruits_object));
+
+ ```
+
+  What would be the output of the code?
+
+-  A. ['apple', 'apple', 'banana']
+-  B. ['banana', 'banana', 'orange']
+-  C. ['orange', 'apple', 'banana']
+-  D. ['banana', 'apple', 'orange']
+
+---------
+**Question #4**
+```sh
+   const user = {
+        first_name: "John",
+        last_name: "Doe",
+        email: "john@doe.com",
+    };
+
+    const new_user = { ...user };
+
+    delete new_user.email;
+
+    console.log(user.email);
+
+ ```
+
+  What would be the output of the code?
+
+-  A. john@doe.com
+-  B. undefined
+-  C. null
+-  D. John Doe
+
+
+---------
+**Question #5**
+```sh
+  let foo = "Me Foo"
+
+  const getMyFoo = () => {
+    const foo = "New Foo"
+
+    return foo
+  }
+
+  getMyFoo()
+ ```
+
+  What would be the output of the code?
+
+-  A. New Foo
+-  B. Me Foo
+-  C. Error
+-  D. undefined
