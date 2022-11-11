@@ -4,21 +4,23 @@
  **Question #1**
 
  ```sh
-   const DisplayCustomMessage = (n) => {
-        const is_even = n % 2 === 0;
+const msg1 = 1;
+const msg2 = "2";
+const msg3 = 3 + " go!";
 
-        return is_even ? "Hello" : "World";
-    };
+const GenerateMessage = (n) => {
+  return `${msg1}+${msg2}+${msg3}`;
+};
 
-    DisplayCustomMessage(3);
+GenerateMessage();
 ```
 
  What would be the output of the code?
 
--  A. Hello
--  B. World
--  C. Hello World
--  D. HelloWorld
+-  A. 1+2+3 go!
+-  B. 3 3 go!
+-  C. 6 go!
+-  D. 123 go!
 
 
 ---------
@@ -27,98 +29,95 @@
 
  **Question #2**
 ```sh
-    let value = "";
-        for (let x = 1; x <= 10; x++) {
-        value += x;
-    }
+   
+    const data = {
+        user1: {
+            name: "Jane Doe",
+            age: 22,
+            gender: "female",
+        },
+        user2: {
+            name: "John Doe",
+            age: 23,
+            gender: "male",
+        },
+    };
 
-    console.log(value);
+    let output = "";
+
+    data.forEach((data) => {
+        output += data.name + " " + data.age;
+    });
+
+    console.log(output);
 
  ```
 
   What would be the output of the code?
 
--  A. 0123456789
--  B. 1234567890
--  C. 12345678910
--  D. 10987654321
+-  A. error
+-  B. Jane Doe 22 John Doe 23
+-  C. John Doe 23 Jane Doe 22
+-  D. null null
 
 ---------
 
  **Question #3**
 
 ```sh
-   const fruits = [
-        "banana",
-        "apple",
-        "orange",
-        "orange",
-        "banana",
-        "apple",
-        "apple",
-        "orange",
-        "banana",
-    ];
+    const array_1 = ["a", "b", "c", "d", "x", "y", "z"];
+    const array_2 = ["b", "c", "d"];
 
-    const fruits_object = {};
-
-    fruits.forEach((fruit) => {
-        fruits_object[fruit] = "available";
-    });
-
-    console.log(Object.keys(fruits_object));
-
+    console.log(array_1.includes(array_2));
  ```
 
   What would be the output of the code?
 
--  A. ['apple', 'apple', 'banana']
--  B. ['banana', 'banana', 'orange']
--  C. ['orange', 'apple', 'banana']
--  D. ['banana', 'apple', 'orange']
+-  A. error
+-  B. undefined
+-  C. true
+-  D. false
 
 ---------
 **Question #4**
 ```sh
-   const user = {
-        first_name: "John",
-        last_name: "Doe",
-        email: "john@doe.com",
-    };
+   const arr = [1, 2, 3];
+    const new_arr = [...arr];
 
-    const new_user = { ...user };
+    for (let x = 1; x < 5; x++) {
+        arr.push(x);
+    }
 
-    delete new_user.email;
-
-    console.log(user.email);
+    console.log(arr.concat(new_arr));
 
  ```
 
   What would be the output of the code?
 
--  A. john@doe.com
--  B. undefined
--  C. null
--  D. John Doe
+-  A. [1, 2, 3, 4, 3, 2, 1, 1, 2, 3]
+-  B. [1, 2, 3, 4, 5, 1, 2, 3, 1, 2, 3]
+-  C. [1, 2, 3, 1, 2, 3, 4, 1, 2, 3]
+-  D. [1, 2, 3, 1, 2, 3, 4, 5, 1, 2, 3]
 
 
 ---------
 **Question #5**
 ```sh
-  let foo = "Me Foo"
+  let sum = 0;
+    const a = [1, 2, 3, 4, 5];
 
-  const getMyFoo = () => {
-    const foo = "New Foo"
+    const getSum = (int) => {
+        sum += int;
+    };
 
-    return foo
-  }
+    a.forEach(getSum);
 
-  getMyFoo()
+    console.log(sum);
  ```
 
   What would be the output of the code?
 
--  A. New Foo
--  B. Me Foo
--  C. Error
+-  A. 0
+-  B. 15
+-  C. 10
 -  D. undefined
