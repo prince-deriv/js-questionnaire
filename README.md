@@ -4,23 +4,17 @@
  **Question #1**
 
  ```sh
-const msg1 = 1;
-const msg2 = "2";
-const msg3 = 3 + " go!";
-
-const GenerateMessage = (n) => {
-  return `${msg1}+${msg2}+${msg3}`;
-};
-
-GenerateMessage();
+    for (var i = 0; i < 3; i++) {
+        setTimeout(() => console.log(i), 1);
+    }
 ```
 
  What would be the output of the code?
 
--  A. 1+2+3 go!
--  B. 3 3 go!
--  C. 6 go!
--  D. 123 go!
+-  A. 333
+-  B. 123
+-  C. 321
+-  D. 111
 
 
 ---------
@@ -30,74 +24,60 @@ GenerateMessage();
  **Question #2**
 ```sh
    
-    const data = {
-        user1: {
-            name: "Jane Doe",
-            age: 22,
-            gender: "female",
-        },
-        user2: {
-            name: "John Doe",
-            age: 23,
-            gender: "male",
-        },
-    };
+   const OutputDifferentTypes = (number, type) => {
+        return type === 1 ? number + "" : number;
+   };
 
-    let output = "";
+   const x = OutputDifferentTypes(1, 1);
+   const y = OutputDifferentTypes(1, 0);
 
-    data.forEach((data) => {
-        output += data.name + " " + data.age;
-    });
-
-    console.log(output);
+   console.log(x == y);
 
  ```
 
   What would be the output of the code?
 
--  A. error
--  B. Jane Doe 22 John Doe 23
--  C. John Doe 23 Jane Doe 22
--  D. null null
+-  A. false
+-  B. true
+-  C. null
+-  D. undefined
 
 ---------
 
  **Question #3**
 
 ```sh
-    const array_1 = ["a", "b", "c", "d", "x", "y", "z"];
-    const array_2 = ["b", "c", "d"];
+    const my_array = [1, 2, 3, 4];
 
-    console.log(array_1.includes(array_2));
+    my_array.push(5);
+
+    my_array.length = 3;
+
+    console.log(my_array);
  ```
 
   What would be the output of the code?
 
 -  A. error
--  B. undefined
--  C. true
--  D. false
+-  B. [1,2,3,4,5]
+-  C. [1,2,3]
+-  D. [3,2,1]
 
 ---------
 **Question #4**
 ```sh
-   const arr = [1, 2, 3];
-    const new_arr = [...arr];
+   let lucky_number = 1 + 2 + "3" + 4 + "5" + 6 + parseInt(7);
 
-    for (let x = 1; x < 5; x++) {
-        arr.push(x);
-    }
-
-    console.log(arr.concat(new_arr));
+   console.log(lucky_number)
 
  ```
 
   What would be the output of the code?
 
--  A. [1, 2, 3, 4, 3, 2, 1, 1, 2, 3]
--  B. [1, 2, 3, 4, 5, 1, 2, 3, 1, 2, 3]
--  C. [1, 2, 3, 1, 2, 3, 4, 1, 2, 3]
--  D. [1, 2, 3, 1, 2, 3, 4, 5, 1, 2, 3]
+-  A. 28
+-  B. 388
+-  C. 33463
+-  D. 334567
 
 
 ---------
@@ -118,6 +98,6 @@ GenerateMessage();
   What would be the output of the code?
 
 -  A. 0
--  B. 15
+-  B. undefined
 -  C. 10
--  D. undefined
+-  D. 15
