@@ -4,17 +4,21 @@
  **Question #1**
 
  ```sh
-    for (var i = 0; i < 3; i++) {
-        setTimeout(() => console.log(i), 1);
-    }
+   const DisplayCustomMessage = (n) => {
+        const is_even = n % 2 === 0;
+
+        return is_even ? "Hello" : "World";
+    };
+
+    DisplayCustomMessage(3);
 ```
 
  What would be the output of the code?
 
--  A. 333
--  B. 123
--  C. 321
--  D. 111
+-  A. Hello
+-  B. World
+-  C. Hello World
+-  D. HelloWorld
 
 
 ---------
@@ -23,81 +27,98 @@
 
  **Question #2**
 ```sh
-   
-   const OutputDifferentTypes = (number, type) => {
-        return type === 1 ? number + "" : number;
-   };
+    let value = "";
+        for (let x = 1; x <= 10; x++) {
+        value += x;
+    }
 
-   const x = OutputDifferentTypes(1, 1);
-   const y = OutputDifferentTypes(1, 0);
-
-   console.log(x == y);
+    console.log(value);
 
  ```
 
   What would be the output of the code?
 
--  A. false
--  B. true
--  C. null
--  D. undefined
+-  A. 0123456789
+-  B. 1234567890
+-  C. 12345678910
+-  D. 10987654321
 
 ---------
 
  **Question #3**
 
 ```sh
-    const my_array = [1, 2, 3, 4];
+   const fruits = [
+        "banana",
+        "apple",
+        "orange",
+        "orange",
+        "banana",
+        "apple",
+        "apple",
+        "orange",
+        "banana",
+    ];
 
-    my_array.push(5);
+    const fruits_object = {};
 
-    my_array.length = 3;
+    fruits.forEach((fruit) => {
+        fruits_object[fruit] = "available";
+    });
 
-    console.log(my_array);
+    console.log(Object.keys(fruits_object));
+
  ```
 
   What would be the output of the code?
 
--  A. error
--  B. [1,2,3,4,5]
--  C. [1,2,3]
--  D. [3,2,1]
+-  A. ['apple', 'apple', 'banana']
+-  B. ['banana', 'banana', 'orange']
+-  C. ['orange', 'apple', 'banana']
+-  D. ['banana', 'apple', 'orange']
 
 ---------
 **Question #4**
 ```sh
-   let lucky_number = 1 + 2 + "3" + 4 + "5" + 6 + parseInt(7);
+   const user = {
+        first_name: "John",
+        last_name: "Doe",
+        email: "john@doe.com",
+    };
 
-   console.log(lucky_number)
+    const new_user = { ...user };
+
+    delete new_user.email;
+
+    console.log(user.email);
 
  ```
 
   What would be the output of the code?
 
--  A. 28
--  B. 388
--  C. 33463
--  D. 334567
+-  A. john@doe.com
+-  B. undefined
+-  C. null
+-  D. John Doe
 
 
 ---------
 **Question #5**
 ```sh
-  let sum = 0;
-    const a = [1, 2, 3, 4, 5];
+  let foo = "My Foo"
 
-    const getSum = (int) => {
-        sum += int;
-    };
+  const getMyFoo = () => {
+    const foo = "New Foo"
 
-    a.forEach(getSum);
+    return foo
+  }
 
-    console.log(sum);
+  getMyFoo()
  ```
 
   What would be the output of the code?
 
--  A. 0
--  B. undefined
--  C. 10
--  D. 15
+-  A. New Foo
+-  B. My Foo
+-  C. Error
+-  D. undefined
